@@ -1,4 +1,5 @@
 const GET_LANDING_PAGE = /* GraphQL */ `
+  # Write your query or mutation here
   fragment logo on LandingPage {
     logo {
       alternativeText
@@ -49,6 +50,16 @@ const GET_LANDING_PAGE = /* GraphQL */ `
       }
     }
   }
+  fragment sectionModules on LandingPage {
+    sectionModules {
+      title
+      modules {
+        title
+        subtitle
+        description
+      }
+    }
+  }
 
   query GET_LANDING_PAGE {
     landingPage {
@@ -57,6 +68,7 @@ const GET_LANDING_PAGE = /* GraphQL */ `
       ...sectionAboutProject
       ...sectionTech
       ...sectionConcepts
+      ...sectionModules
     }
   }
 `
