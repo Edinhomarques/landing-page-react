@@ -40,6 +40,31 @@ export type SectionModulesProps = {
   title: string
   modules: Array<ModulesProps>
 }
+export type SectionAgendaProps = {
+  title: string
+  description: string
+}
+export type PrincingBoxProps = {
+  totalPrice: number
+  numberInstallments: number
+  priceInstallment: number
+  benefits: string
+  button: ButtonProps
+}
+export type AuthorsArray = {
+  name: string
+  photo: LogoProps
+  role: string
+  socialLinks: Array<{
+    title: string
+    url: string
+  }>
+  description: string
+}
+export type SectionAboutUsProps = {
+  title: string
+  authors: Array<AuthorsArray>
+}
 export type LandingPageProps = {
   logo: LogoProps
   header: HeaderProps
@@ -47,4 +72,7 @@ export type LandingPageProps = {
   sectionTech: SectionTechProps
   sectionConcepts: SectionConceptsProps
   sectionModules: SectionModulesProps
+  sectionAgenda: SectionAgendaProps
+  pricingBox: PrincingBoxProps
+  sectionAboutUs: SectionAboutUsProps
 }
