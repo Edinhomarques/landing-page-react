@@ -25,24 +25,7 @@ const PricingBox = ({
         <span>{numberInstallments} x de</span> R${priceInstallment}
       </S.DiscountPrice>
     </S.Prices>
-    <S.BenefitsList>
-      <S.BenefitsItem>
-        Acesso aos <strong>6 módulos</strong> assim que lançados
-      </S.BenefitsItem>
-
-      <S.BenefitsItem>
-        Código de <strong>todo o projeto</strong> separado em commits
-      </S.BenefitsItem>
-
-      <S.BenefitsItem>
-        Contato <strong>direto</strong> com os instrutores via Slack
-      </S.BenefitsItem>
-
-      <S.BenefitsItem>
-        <strong>Lives exclusivas</strong> durante o curso
-      </S.BenefitsItem>
-    </S.BenefitsList>
-
+    <S.BenefitsList dangerouslySetInnerHTML={{ __html: benefits }} />
     <Button href={button.url} onClick={onClick} withPrice>
       <p>{button.label}</p>
       <div>
